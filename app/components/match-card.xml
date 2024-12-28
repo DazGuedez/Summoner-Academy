@@ -1,0 +1,10 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd">
+  <StackLayout class="match-card p-4 m-2 rounded-lg bg-white dark:bg-gray-800">
+    <Label text="{{ championName }}" class="text-lg font-bold" />
+    <GridLayout columns="auto,*,auto" class="mt-2">
+      <Label col="0" text="{{ kda }}" class="text-sm" />
+      <Label col="1" text="{{ timestamp }}" class="text-sm text-center" />
+      <Label col="2" text="{{ outcome }}" class="text-sm" />
+    </GridLayout>
+  </StackLayout>
+</Page>

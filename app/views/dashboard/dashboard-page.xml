@@ -1,0 +1,34 @@
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+  <ActionBar title="Summoners Academy" />
+  
+  <GridLayout rows="auto,*">
+    <StackLayout row="0" class="p-4 bg-blue-500">
+      <Label text="{{ summonerName }}" class="text-2xl text-white" />
+      <Label text="{{ summonerLevel }}" class="text-lg text-white" />
+    </StackLayout>
+    
+    <TabView row="1" selectedTabTextColor="#3498db">
+      <TabViewItem title="Matches">
+        <ListView items="{{ matches }}">
+          <ListView.itemTemplate>
+            <StackLayout class="match-card" />
+          </ListView.itemTemplate>
+        </ListView>
+      </TabViewItem>
+      
+      <TabViewItem title="Progress">
+        <StackLayout class="p-4">
+          <Label text="Progress Tracking" class="text-xl mb-4" />
+          <!-- Progress charts will go here -->
+        </StackLayout>
+      </TabViewItem>
+      
+      <TabViewItem title="Training">
+        <StackLayout class="p-4">
+          <Label text="Training Modules" class="text-xl mb-4" />
+          <!-- Training exercises will go here -->
+        </StackLayout>
+      </TabViewItem>
+    </TabView>
+  </GridLayout>
+</Page>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="onNavigatingTo">
+  <ActionBar title="Summoners Academy" />
+  
+  <GridLayout rows="auto, *">
+    <!-- Profile Section -->
+    <StackLayout row="0" class="p-4 bg-blue-600">
+      <Label text="Welcome Summoner" class="text-2xl text-white font-bold" />
+      <Label text="Level 30" class="text-lg text-white" />
+    </StackLayout>
+
+    <!-- Main Content -->
+    <GridLayout row="1" rows="*, auto" class="p-4">
+      <ScrollView row="0">
+        <StackLayout>
+          <!-- Match Analysis Card -->
+          <StackLayout class="p-4 m-2 bg-white rounded-lg shadow">
+            <Label text="Match Analysis" class="text-xl font-bold mb-2" />
+            <Label text="Review your recent games and get personalized feedback" class="text-gray-600" />
+            <Button text="View Matches" tap="{{ onViewMatches }}" class="bg-blue-500 text-white p-3 rounded mt-2" />
+          </StackLayout>
+
+          <!-- Training Exercises Card -->
+          <StackLayout class="p-4 m-2 bg-white rounded-lg shadow">
+            <Label text="Training Exercises" class="text-xl font-bold mb-2" />
+            <Label text="Practice specific skills with guided exercises" class="text-gray-600" />
+            <Button text="Start Training" tap="{{ onStartTraining }}" class="bg-green-500 text-white p-3 rounded mt-2" />
+          </StackLayout>
+
+          <!-- Progress Dashboard Card -->
+          <StackLayout class="p-4 m-2 bg-white rounded-lg shadow">
+            <Label text="Progress Dashboard" class="text-xl font-bold mb-2" />
+            <Label text="Track your improvement over time" class="text-gray-600" />
+            <Button text="View Progress" tap="{{ onViewProgress }}" class="bg-purple-500 text-white p-3 rounded mt-2" />
+          </StackLayout>
+        </StackLayout>
+      </ScrollView>
+    </GridLayout>
+  </GridLayout>
+</Page>
